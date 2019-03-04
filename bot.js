@@ -15,8 +15,6 @@ client.on('warn', console.warn);
 client.on('error', console.error);
 
 client.on('ready', () => console.log('Yo this ready!'));
-const Discord = require("discord.js");
-const client = new Discord.Client();
 client.on('message',async message => {
   if(message.author.bot) return;
 var prefix = "#"
@@ -107,4 +105,4 @@ var duration = (upgradeTime * 1000)
 });
 
 
-client.login("token");
+client.login(process.env.BOT_TOKEN);
